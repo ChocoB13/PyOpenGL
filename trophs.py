@@ -8,8 +8,9 @@ from core_ext.mesh import Mesh
 class Trophs:
     def __init__(self):
         self.ponto = 0
+        #self.text = 
         pont_geo = RectangleGeometry(width=120, height=60, position=[800, 600], alignment=[1,1])
-        pont_mat = TextureMaterial(TextTexture(text="Pontuação",
+        pont_mat = TextureMaterial(TextTexture(text=f"Pontuação: /n/t {self.ponto}",
                                     system_font_name="Arial",
                                     font_size=50, font_color=[0, 0, 0],
                                     transparent=True,
@@ -17,7 +18,7 @@ class Trophs:
                                     align_horizontal=0.5, align_vertical=0.1,
                                     image_border_width=4,
                                     image_border_color=[0, 0, 0]))
-        self.pt_mesh = Mesh(pont_geo, pont_mat)
+        #self.mesh2 = Mesh(pont_geo, pont_mat)
         sprite_geometry = RectangleGeometry(width=120, height=60, position=[800, 600], alignment=[1,1])
         sprite_material = SpriteMaterial(Texture("images/pontos.png"), {
             "billboard" : 1, 
@@ -29,4 +30,5 @@ class Trophs:
     
     def update(self):
         self.mesh.material.uniform_dict["tileNumber"].data = self.ponto
+        sef.mesh2 = Mesh(pont_geo, pont_mat)
             
