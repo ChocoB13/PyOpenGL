@@ -75,4 +75,9 @@ def check_colisions_objects(objects, p_obj, stats):
             #print(stats.vidas_left)
             #creat_foods(foods, gm_settings)
             #creat_objects(objects, gm_settings)
+            
+            
+def check_play_button(input_object, playbutton):
+    if input_object.is_mouse_down:
+        print(mouse_position)
 
